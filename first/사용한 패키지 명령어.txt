@@ -1,0 +1,18 @@
+npm init
+package가 생김
+
+npm install nconf --save
+package-lock, node_modules폴더 생김
+package 파일에 dependencies가 생김
+
+npm install express --save
+"nconf": "^0.10.0", 추가됨
+
+
+npm install winston --save
+"winston": "^3.2.1" 이 추가됨
+
+1. 통째로 복사 ... 무겁
+2. 일일이 인스톨... 이것도 오래걸림
+
+3. 

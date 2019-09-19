@@ -1,0 +1,9 @@
+calc.js
+calc2.js
+package.json
+package-lock.json
+
+명령어
+npm install
+
+위에 거만 쓰면 node_modules 폴더가 실행됨
