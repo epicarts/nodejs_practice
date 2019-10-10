@@ -1,0 +1,17 @@
+{"message":"파일 복사 [./output.txt] -> [./output2.txt]","level":"info"}
+{"message":"기존 파일 [./output2.txt] 삭제함.","level":"info"}
+{"message":"파일 복사 [./output.txt] -> [./output2.txt]","level":"info"}
+{"message":"파일 복사 [./output.txt] -> [./output2.txt]","level":"info"}
+{"message":"기존 파일 [./output2.txt] 삭제함.","level":"info"}
+{"message":"로그 넘기기","level":"info"}
+{"message":"파일 복사 [./output.txt] -> [./output2.txt]","level":"info"}
+{"message":"기존 파일 [./output2.txt] 삭제함.","level":"info"}
+{"message":"로그 넘기기1234","level":"info"}
+{"message":"파일 복사 [./output.txt] -> [./output2.txt]","level":"info"}
+{"message":"기존 파일 [./output2.txt] 삭제함.","level":"info"}
+{"message":"로그 넘기기12342222","level":"info"}
+{"message":"파일 복사 [./output.txt] -> [./output2.txt]","level":"info"}
+{"message":"기존 파일 [./output2.txt] 삭제함.","level":"info"}
+{"message":"client:::ffff:127.0.0.1","level":"info"}
+{"message":"client:::ffff:127.0.0.1","level":"info"}
+{"message":"client:::ffff:127.0.0.1","level":"info"}
