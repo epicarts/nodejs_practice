@@ -1,6 +1,6 @@
 var http = require('http');
 var server = http.createServer();
-var port = 3000
+var port = 3001
 server.listen(port, function(){
     console.log("server started ...!")
 });
@@ -14,8 +14,19 @@ server.on('connection', function(socket){ // 소켓을 이용해서 커넥트됨
 });
 server.on('request',function(req, res){
     res.write("<h1 style='color:blue'>hello client...!!!!!!!!!!! res.write function </h1>")// res = 서버 => 클라이언트 wirte를 하면 클라이언트에서 받음.
-    res.end()
+    res.end()// end가 나와야 화면에 보임
 });
+
+var fs = require('fs')
+
+server.on('request', function(req, res){
+          
+    var file = fs.createReadStream("lion.png", {flag:'r'})
+    file.pipe(res);
+});
+
+
+
 
 
 //var fs = require('fs');
