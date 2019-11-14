@@ -11,7 +11,6 @@ var multer = require('multer');// 파일 업로드용 미들웨어
 var fs = require('fs');
 var cors = require('cors');//클라이언트에서 ajax로 요청 시 CORS(다중 서버 접속) 지원
 
-
 /////create
 var app = express();
 

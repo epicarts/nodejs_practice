@@ -1,0 +1,6 @@
+mongod --dbpath d:/nodejs_practice/MongoDB/local
+
+>mongo //client
+>use local //지정한 로컬 사용 switched
+>db.users.insert({'id':'is_id', password:'1234', 'name':'young'})  // 테이블 삽입. 없으면 자동으로 users 컬렉션(테이블) 생성
+>db.users.find().pretty()
