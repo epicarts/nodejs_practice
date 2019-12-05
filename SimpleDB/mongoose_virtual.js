@@ -78,10 +78,10 @@ var createUserSchema = function (){
     
     // info를 virtual 메소드로 정의
     UserSchema
-        .virtual('password')
+        .virtual('password')//password 라는 값이 들어가면 이 함수가 동작함. 
         .set(function(password) {
         this._password = password;
-        this.salt = this.makeSalt();
+        this.salt = this.makeSalt();//특정 사용자를 암호화.. this  makeSalt 는 메소드 형태로 붙어짐.
         this.hashed_password = this.encryptPassword(password);
         console.log('virtual password 호출됨 : ' + this.hashed_password);
     })
