@@ -29,13 +29,13 @@ Schema.createSchema = function (mongoose){
         
     UserSchema.static('findById', function(id, callback) {
         return this.find({id : id}, callback);
-    });
+    });//데이터 베이스 전체를 가져옴 static
     
     UserSchema.static('findAll', function(callback) {
         return this.find({ }, callback);
     });
     
-    UserSchema.method('encryptPassword', function(plainText, inSalt) {
+    UserSchema.method('encryptPassword', function(plainText, inSalt) {// 일부 사용자만 가져옴. method
         if(inSalt) {
             return crypto.createHmac('sha1', inSalt).update(plainText).digest('hex');
         } else {
@@ -62,7 +62,7 @@ Schema.createSchema = function (mongoose){
     });
     
     // 필수 속성에 대한 유효성 확인 (길이 값 체크)
-    UserSchema.path('id').validate(function(id) {
+    UserSchema.path('id').validate(function(id) {//id가 있으면 가서 길이가 있으면 반환댐
         return id.length;
     }, 'id 칼럼의 값이 없습니다.');
     

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <title>테스트 페이지</title>
+        <style>
+            <csst {
+                color:blue;
+                display:block;
+            }
+        </style>
+    </head>
+    <body style="color:red; background-color:grey">
+        <h1>로그인 성공</h1>
+        <div class=csst><p>사용자 아이디 <%= idd %></p></div>
+        <div><p>사용자 이름: </p></div>
+        <% for(var i = 0; i<100; i++) { %>
+        <br><br><a href='/public/login.html'>다시 로그인하기</a>
+        <% } %>
+    </body>
+</html>

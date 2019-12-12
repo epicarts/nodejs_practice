@@ -160,8 +160,18 @@ var listuser = function(req, res) {
     }
 }
 
-
-module.exports.init = init;
+//module.exports.init2 = init; //이걸 사용하는 외부에서 user.init2 라고 사용해야함
+var test = function(req, res){
+    console.log('user 모듈 안에 있는 login 호출됨');
+    var context = {};
+    req.app.render('test', context, function(err, html){
+        if(err) throw err;
+        res.end(html)
+        
+    });
+};
+module.exports.test = test;
+module.exports.init = init; 
 module.exports.login = login;
 module.exports.adduser = adduser;
 module.exports.listuser = listuser;

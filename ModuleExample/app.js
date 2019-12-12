@@ -4,7 +4,8 @@ var express = require('express'), http = require('http'), path = require('path')
 var bodyParser = require('body-parser'), cookieParser = require('cookie-parser'), static = require('serve-static');
 // Session 미들웨어 불러오기
 var expressSession = require('express-session');
-var user = require('./routes/user');
+var user = require('./routes/user2');
+//var user = require('./routes/user2');// 로 변경해 주면됨
 
 
 // 익스프레스 객체 생성
@@ -24,7 +25,6 @@ app.use(expressSession({
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
-// var user = require('./routes/user2'); 로 변경해 주면됨
 
 
 
@@ -75,7 +75,7 @@ var createUserSchema = function (){
     UserSchema = require('./database/user_schema').createSchema(mongoose);
     
     // UserModel 모델 정의
-    UserModel = mongoose.model("users3", UserSchema);
+    UserModel = mongoose.model("users3", UserSchema);//UserModel.findid / UserModel.findAll 과 같이 스택틱(static)으로 정의된것만 상요가능.
     console.log('users 정의함.');
     
     // init 호출
@@ -88,5 +88,6 @@ router.route('/process/adduser').post(user.adduser);
     
 router.route('/process/listuser').post(user.listuser);                
                 
+router.route('/process/test').get(user.test);
 
 app.use('/', router);

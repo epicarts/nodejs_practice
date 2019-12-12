@@ -72,7 +72,7 @@ var login = function(req, res) {
                 console.log('....to client...');
                 var username = docs[0].name;
                 
-                var context = {userid:paramId, username:username};
+                var context = {userid:paramId, username:username};//랜더
                 req.app.render('login_success', context, function(err, html){
                     if(err) {
                         console.error("뷰 렌더링 중 오류 발생: " + err.stack);
@@ -171,8 +171,20 @@ var listuser = function(req, res) {
     }
 }
 
+var test = function(req, res){
+    var id = req.query.id;
+    var context = {idd: id};
+    console.log('user 모듈 안에 있는 login 호출됨');
+    var context = {};
+    req.app.render('test', context, function(err, html){
+        if(err) throw err;
+        res.end(html)
+        
+    });
+};
 
 module.exports.init = init;
 module.exports.login = login;
 module.exports.adduser = adduser;
 module.exports.listuser = listuser;
+module.exports.test = test;
